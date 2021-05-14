@@ -1,0 +1,25 @@
+{
+	"description": "Adds a button to export/copy video links from a YouTube Queue/Playlist to clipboard",
+	"manifest_version": 2,
+	"name": "YouTube queue/playlist links export",
+	"version": "1.0",
+	"homepage_url": "https://github.com/Zauberfisch/firefox-youtube-links-export",
+	"icons": {
+		"48": "48.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://*.youtube.com/*",
+				"*://*.youtu.be/*"
+			],
+			"js": [
+				"main.js"
+			]
+		}
+	],
+	"permissions": [
+		"activeTab",
+		"clipboardWrite"
+	]
+}
